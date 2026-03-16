@@ -39,7 +39,7 @@ async function requireAuth(req: any, res: any, next: any) {
   if (!authHeader?.startsWith('Bearer ')) {
     res.status(401)
       .setHeader('WWW-Authenticate',
-        `Bearer resource_metadata="${AUTH_BASE_URL}/.well-known/oauth-protected-resource/mcp"`)
+        `Bearer resource_metadata="${TASKET_MCP_URL}/.well-known/oauth-protected-resource/mcp"`)
       .json({ error: 'unauthorized', error_description: 'Bearer token required' });
     return;
   }
