@@ -180,4 +180,12 @@ export function registerAllTools(server: McpServer, api: TasketApiClient, token:
   server.tool('get_silent_tasks', 'Get tasks with overdue updates — "Silent Tasks" that need attention', {}, async () => {
     try { return json(await api.getSilentTasks(token)); } catch (e) { return apiError(e); }
   });
+
+  // ══════════════════════════════════════════════════════════════════
+  // USER OPERATIONS (1)
+  // ══════════════════════════════════════════════════════════════════
+
+  server.tool('get_current_user', 'Get the currently authenticated user — use this to resolve "me" or "assign to me"', {}, async () => {
+    try { return json(await api.getCurrentUser(token)); } catch (e) { return apiError(e); }
+  });
 }

@@ -42,4 +42,7 @@ export class TasketApiClient {
   // Dashboard
   async getDashboard(token: string) { return (await this.client.get('/dashboard', { headers: this.h(token) })).data; }
   async getSilentTasks(token: string) { return (await this.client.get('/dashboard/silent-tasks', { headers: this.h(token) })).data; }
+
+  // Users
+  async getCurrentUser(token: string) { return (await this.client.get('/users/me', { headers: this.h(token) })).data; }
 }
