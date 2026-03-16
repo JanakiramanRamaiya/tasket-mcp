@@ -1,0 +1,26 @@
+{
+  "name": "tasket-mcp",
+  "version": "1.0.0",
+  "description": "Tasket MCP server — pure ESM, Express + MCP SDK, calls tasket-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:dev": "node --watch dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "axios": "^1.7.9",
+    "express": "^4.21.2",
+    "jwks-rsa": "^3.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.7",
+    "typescript": "^5.7.3"
+  }
+}
